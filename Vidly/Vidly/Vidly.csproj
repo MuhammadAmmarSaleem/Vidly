@@ -185,6 +185,14 @@
     <Compile Include="Migrations\202001290250374_AddedMemberShipType.Designer.cs">
       <DependentUpon>202001290250374_AddedMemberShipType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002010900163_PopulateMembershipType.cs" />
+    <Compile Include="Migrations\202002010900163_PopulateMembershipType.Designer.cs">
+      <DependentUpon>202002010900163_PopulateMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002010937596_ApplyDataAnnotationToCustomerName.cs" />
+    <Compile Include="Migrations\202002010937596_ApplyDataAnnotationToCustomerName.Designer.cs">
+      <DependentUpon>202002010937596_ApplyDataAnnotationToCustomerName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -205,6 +213,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -276,6 +285,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001290250374_AddedMemberShipType.resx">
       <DependentUpon>202001290250374_AddedMemberShipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002010900163_PopulateMembershipType.resx">
+      <DependentUpon>202002010900163_PopulateMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002010937596_ApplyDataAnnotationToCustomerName.resx">
+      <DependentUpon>202002010937596_ApplyDataAnnotationToCustomerName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

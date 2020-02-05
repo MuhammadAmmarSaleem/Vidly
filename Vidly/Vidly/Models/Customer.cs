@@ -10,6 +10,7 @@ namespace Vidly.Models
     {
         public virtual long  Id { get; set; }
         [StringLength(255)]
+        [Required]
         public virtual string  Name { get; set; }
         public virtual bool  IsSubscribedToNewsLetter { get; set; }
         public virtual  MemberShipType  MemberShipType { get; set; }
