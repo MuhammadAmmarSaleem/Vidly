@@ -170,9 +170,9 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ActionController.cs" />
     <Compile Include="Controllers\ActionParameterController.cs" />
-    <Compile Include="Controllers\ConventionBasedRouteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -269,6 +269,7 @@
     <Folder Include="Views\ActionParameter\" />
     <Folder Include="Views\ActionResult\" />
     <Folder Include="Views\ConventionBasedRoute\" />
+    <Folder Include="Views\Movies\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
