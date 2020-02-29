@@ -26,7 +26,7 @@ namespace Vidly
              * Code Snippet: 'routes.MapMvcAttributeRoute()';
              */
 
-            routes.MapMvcAttributeRoutes();
+           // routes.MapMvcAttributeRoutes();
 
             /*
             routes.MapRoute(
