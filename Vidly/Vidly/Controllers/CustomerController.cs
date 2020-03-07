@@ -4,16 +4,22 @@ using System.Linq;
 using System.Web;
 using Vidly.Models;
 using System.Web.Mvc;
+using System.Data.Entity;
 
 namespace Vidly.Controllers
 {
     public class CustomerController : Controller
     {
         // GET: Customer
-       // [Route("/Customer/GetAll")]
+        // [Route("/Customer/GetAll")]
+        private ApplicationDbContext context;
+        public CustomerController()
+        {
+            this.context = new ApplicationDbContext();
+        }
        public ActionResult GetAll()
         {
-            List<Customer> customers = GetAllCustomers();
+            var customers = context.Customers.Include(x => x.MemberShipType).ToList();
             return View("~/Views/Customers/CustomerList.cshtml", customers);
         }
 

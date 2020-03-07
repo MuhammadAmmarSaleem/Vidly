@@ -201,6 +201,18 @@
     <Compile Include="Migrations\202002151431294_AddedMovie.Designer.cs">
       <DependentUpon>202002151431294_AddedMovie.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003070638484_AddedNameToMemeberShipType.cs" />
+    <Compile Include="Migrations\202003070638484_AddedNameToMemeberShipType.Designer.cs">
+      <DependentUpon>202003070638484_AddedNameToMemeberShipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003070641434_UpdateNameInMemeberShipType.cs" />
+    <Compile Include="Migrations\202003070641434_UpdateNameInMemeberShipType.Designer.cs">
+      <DependentUpon>202003070641434_UpdateNameInMemeberShipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003070656591_PopulateCustomerTable.cs" />
+    <Compile Include="Migrations\202003070656591_PopulateCustomerTable.Designer.cs">
+      <DependentUpon>202003070656591_PopulateCustomerTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -310,6 +322,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002151431294_AddedMovie.resx">
       <DependentUpon>202002151431294_AddedMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003070638484_AddedNameToMemeberShipType.resx">
+      <DependentUpon>202003070638484_AddedNameToMemeberShipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003070641434_UpdateNameInMemeberShipType.resx">
+      <DependentUpon>202003070641434_UpdateNameInMemeberShipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003070656591_PopulateCustomerTable.resx">
+      <DependentUpon>202003070656591_PopulateCustomerTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
