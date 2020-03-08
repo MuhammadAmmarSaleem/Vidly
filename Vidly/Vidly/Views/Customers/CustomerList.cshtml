@@ -21,14 +21,18 @@ else
                 <td>
                     Member Ship Types
                 </td>
+                <td>
+                    Total Purchases
+                </td>
             </tr>
         </thead>
         <tbody>
             @foreach (var customer in Model)
             {
                 <tr>
-                    <td>@customer.Name</td>
+                    <td><a href="/Customer/Details/@customer.Id">@customer.Name</a></td>
                     <td>@customer.MemberShipType.Name</td>
+                    <td>@customer.TotalPurchases</td>
                 </tr>
             }
         </tbody>

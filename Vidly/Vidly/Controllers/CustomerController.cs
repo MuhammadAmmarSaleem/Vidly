@@ -5,6 +5,7 @@ using System.Web;
 using Vidly.Models;
 using System.Web.Mvc;
 using System.Data.Entity;
+using System.Globalization;
 
 namespace Vidly.Controllers
 {
@@ -19,22 +20,29 @@ namespace Vidly.Controllers
         }
        public ActionResult GetAll()
         {
-            var customers = context.Customers.Include(x => x.MemberShipType).ToList();
-            return View("~/Views/Customers/CustomerList.cshtml", customers);
+            /*
+            var customers = GetAllCustomers();
+            foreach (var customer in customers)
+            {
+                context.Customers.Add(customer);
+                context.SaveChanges();
+            }
+            */
+            var customersList = context.Customers.Include(x => x.MemberShipType).ToList();
+            return View("~/Views/Customers/CustomerList.cshtml", customersList);
         }
 
         public ActionResult Details(long id)
         {
-            List<Customer> customers = GetAllCustomers();
-            Customer customer = customers.Find(x => x.Id == id);
+            var customer = context.Customers.Find(id);
             return View("~/Views/Customers/CustomerDetail.cshtml", customer);
         }
         private List<Customer> GetAllCustomers()
         {
             List<Customer> customers = new List<Customer>
             {
-                new Customer{Id=1, Name="Ammar", IsSubscribedToNewsLetter=true, MemberShipTypeId=1},
-                new Customer{Id=2, Name="Umer", IsSubscribedToNewsLetter=false, MemberShipTypeId=2}
+                new Customer{Name="Ahmed", IsSubscribedToNewsLetter=true, MemberShipTypeId=3, TotalPurchases = 200, BirthDate = DateTime.ParseExact("1996-02-07", "yyyy-MM-dd", CultureInfo.InvariantCulture)},
+                new Customer{Name="Saad", IsSubscribedToNewsLetter=false, MemberShipTypeId=2,  TotalPurchases = 500}
             };
             return customers;
         }
