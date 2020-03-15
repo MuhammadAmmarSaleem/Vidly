@@ -3,24 +3,17 @@
     ViewBag.Title = "Movie List";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-    <style>
-         tbody{
-            overflow : auto;
-            height: 300px;
-            display: block;
-        }
-    </style>
-
+    
 @if (Model != null)
 {
     <table border="1" class="table table-striped">
         <thead>
             <tr>
                 <td>
-                    Code
+                    Movie
                 </td>
                 <td>
-                    Movies
+                    Genre
                 </td>
             </tr>
         </thead>
@@ -28,21 +21,11 @@
             @foreach (var movie in Model)
             {
                 <tr>
-                    <td><a href="/Movies/Details/@movie.Id">@movie.Id</a></td>
                     <td><a href="/Movies/Details/@movie.Id">@movie.Name</a></td>
+                    <td>@movie.Genre.Description</td>
                 </tr>
             }
         </tbody>
-    <tfoot>
-        <tr>
-            <td>
-                Code
-            </td>
-            <td>
-                Movies
-            </td>
-        </tr>
-    </tfoot>
     </table>
 }
 else

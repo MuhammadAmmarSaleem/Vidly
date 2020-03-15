@@ -225,9 +225,22 @@
     <Compile Include="Migrations\202003080703126_AddedTotalPurchasesInCustomer.Designer.cs">
       <DependentUpon>202003080703126_AddedTotalPurchasesInCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003150421362_AddedPropertiesInMovieTable.cs" />
+    <Compile Include="Migrations\202003150421362_AddedPropertiesInMovieTable.Designer.cs">
+      <DependentUpon>202003150421362_AddedPropertiesInMovieTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003150425068_PopulateGenreTable.cs" />
+    <Compile Include="Migrations\202003150425068_PopulateGenreTable.Designer.cs">
+      <DependentUpon>202003150425068_PopulateGenreTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003150432022_PopulateMovieTable.cs" />
+    <Compile Include="Migrations\202003150432022_PopulateMovieTable.Designer.cs">
+      <DependentUpon>202003150432022_PopulateMovieTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MemberShipType.cs" />
@@ -352,6 +365,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003080703126_AddedTotalPurchasesInCustomer.resx">
       <DependentUpon>202003080703126_AddedTotalPurchasesInCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003150421362_AddedPropertiesInMovieTable.resx">
+      <DependentUpon>202003150421362_AddedPropertiesInMovieTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003150425068_PopulateGenreTable.resx">
+      <DependentUpon>202003150425068_PopulateGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003150432022_PopulateMovieTable.resx">
+      <DependentUpon>202003150432022_PopulateMovieTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

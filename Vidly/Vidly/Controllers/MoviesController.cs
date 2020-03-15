@@ -18,7 +18,12 @@ namespace Vidly.Controllers
          *  
          *  More Info: ASP.NET MVC Attribute Route Constraints
          */
-         
+        private ApplicationDbContext _context;
+        public MoviesController()
+        {
+            this._context = new ApplicationDbContext();
+        }
+
         [Route("movies/released/{year: regex(\\d{4})}/{month: regex(\\d{2}): range(1,12)}")]
         public ActionResult ByReleaseDate(int year, byte month)
         {
@@ -27,13 +32,13 @@ namespace Vidly.Controllers
 
         public ActionResult GetAll()
         {
-            List<Movie> movies = GetAllMovies();
+            List<Movie> movies = _context.Movies.Include(x => x.Genre).ToList();
             return View("~/Views/Movies/MovieList.cshtml", movies);
         }
 
         public ActionResult Details(long id)
         {
-            List<Movie> movies = GetAllMovies();
+            List<Movie> movies = _context.Movies.Include(x => x.Genre).ToList();
             Movie movie = movies.Find(x => x.Id == id);
             return View("~/Views/Movies/MovieDetail.cshtml", movie);
 
